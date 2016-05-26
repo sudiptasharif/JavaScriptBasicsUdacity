@@ -1,158 +1,3 @@
-/*
-// [string].replace([old],[new])
-var email = "sudipta.sharif@outlook.com";
-var newEmail = email.replace("outlook","gmail");
-console.log(email);
-console.log(newEmail);
-
-var awesomeThoughts = "My Name is Sudipta Sharif. I am AWESOME!";
-var funThoughts = awesomeThoughts.replace("AWESOME","FUN");
-
-
-//$("#main").append(funThoughts);
-var name = "Sudipta Sharif";
-
-
-
-var audacity = "audacity";
-var udacity = audacity.slice(1);
-
-console.log(udacity);
-
-var name = "AlbERt EINstEiN";
-
-function nameChanger(oldName) {
-    var finalName = oldName;
-    // Your code goes here!
-    
-    var separator = ' ';
-    var nameArray = finalName.split(separator);
-    
-	var firstName = nameArray[0];
-	var lastName = nameArray[1];
-		
-	firstName = firstName.toLowerCase();
-	lastName = lastName.toUpperCase();
-
-	firstName = firstName[0].toUpperCase()+firstName.slice(1);
-	
-	finalName = firstName+" "+lastName;
-	console.log(finalName);
-	
-    
-    // Don't delete this line!
-    return finalName;
-};
-
-// Did your code work? The line below will tell you!
-console.log(nameChanger(name));
-
-
-var skills = ["Awesomeness", "HTML", "CSS", "JavaScript", "JQuery", "PHP", "MySQL"];
-var contactInfo = {
-	"contactGeneric": "Address",
-	"mobile": "(260)739-8352",
-	"email":"sudipta.sharif@outlook.com",
-	"twitter":"awesomeSudipta",
-	"gitHub": "sudiptasharif",
-	"blog":"sudiptaBlog",
-	"location":"Fort Wayne"
-};
-var bio = {
-	"name": "Sudipta Sharif",
-	"role": "Sofware, Web and Mobile Application Developer",
-	"contact": contactInfo,
-	"pictureURL": "images/fry.jpg",
-	"welcome": "Hello! Welcome to my Resume.",
-	"skills":skills	
-};
-// Replace the necessary variables from  the helper.js
-var formattedName = HTMLheaderName.replace("%data%",bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-var formattedContactGeneric = HTMLcontactGeneric.replace("%contact%",bio.contact.contactGeneric);
-console.log(formattedContactGeneric);
-formattedContactGeneric = formattedContactGeneric.replace("%data%","4318 Roseview Road, Fort Wayne, IN 46815, USA");
-console.log(formattedContactGeneric);
-var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
-var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
-var formattedtwitter = HTMLtwitter.replace("%data%",bio.contact.twitter);
-var formattedgithub = HTMLgithub.replace("%data%",bio.contact.gitHub);
-var formattedblog = HTMLblog.replace("%data%",bio.contact.blog);
-var formattedlocation = HTMLlocation.replace("%data%",bio.contact.location);
-var formattedbioPic = HTMLbioPic.replace("%data%",bio.pictureURL);
-var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcome);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#topContacts").append(formattedContactGeneric);
-$("#topContacts").append(formattedMobile);
-$("#topContacts").append(formattedEmail);
-$("#topContacts").append(formattedtwitter);
-$("#topContacts").append(formattedgithub);
-$("#topContacts").append(formattedblog);
-$("#topContacts").append(formattedlocation);
-//$("#topContacts").append(formattedbioPic);
-//$("#topContacts").append(formattedwelcomeMsg);
-
-var work = {
-	"position": "Student Security Analyst",
-	"employer": "Indiana University Purdue University Fort Wayne",
-	"yearsWorked":3,
-	"city": "Fort Wayne"
-};
-
-var education = {
-	"name": "Purdue University, Fort Wayne, IN, USA",
-	"years":4.5,
-	"city": "Fort Wayne"
-};
-
-$("#main").append(work["position"]);
-$("#main").append(education.name);
-
-var sudipta = {
-	"name":"Sudipta",
-	"hometown":"Mymensingh",
-	"age":24
-};
-
-document.write("My name is "+sudipta.name+"<br/>");
-document.write("My home town is "+sudipta.hometown+"<br/>");
-document.write("My age is "+sudipta.age+"<br/>");
-
-var family = [{
-	"name": "Sudipta Sharif",
-	"age" : 24
-},
-{
-	"name" : "Ridwan Sharif",
-	"age" : 14,
-}];
-
-document.write(family[1].name);
-document.write(family[0].age);
-
-var education = {
-	"ipfw":{
-		"name":"Purdue University, Fort Wayne",
-		"city": "Fort Wayne",
-		"major":"Computer Science",
-		"graduationYear": 2016
-	},
-	"gdBirla":{
-		"name": "G.D.Birla High School",
-		"city": "Kolkata",
-		"graduationYear":2011
-		
-	},
-	"anthony": {
-		"name":"St. Anthony's Boys School",
-		"city":"Kurseong",
-		"graduationYear":2009
-	}
-};
-*/
-
 // Works
 var workExperience = {
 	"student_security_analyst":{
@@ -209,30 +54,52 @@ var workExperience = {
 // Projects
 var projects = {
 	"dst_vision":{
-		
+		"title":"Supplementary Web Application for DST Vision Requests.",
+		"dates":"August 2015-May 2016",
+		"description":"As part of our Senior Design Capstone Project, we created a web site that automates"+
+		" various repetitive tasks for a business analyst. These tasks included parsing an XML file according to Lincoln's business logic, sending emails periodically,"+
+		" keeping track of all the emails sent and received, keeping track of all the requesters who has made a request in a database and a list of all the requesters who were approved and denied."+
+		" We integrated useful CRUD operations into this web application using Bootstrap, JQuery, AJAX, PHP and MySQL",
+		"images":[]
 	},
 	"vulnerable_web_app":{
-		
+		"title":"Demonstrating SQL injection in a vulnerable web site.",
+		"dates":"April 2016-May 2016",
+		"description":"As part of my Operating and Security Course, I demonstrated in class how we can exploit a web site that is vulnerable to "+
+		"SQL injection attack my building web site that does not follow safe PHP-MySQL coding standards. I used Bootstrap to give my web site a "+
+		"aesthetically pleasing appearance. In addition to demonstrating my SQL injection attacks, I also demonstrated what steps we can take to prevent "+
+		"SQL injection attacks",
+		"images":[]	
 	}
 };
 
-
+// Contacts
+var contacts = {
+	"mobile":"(260) 739-8352",
+	"email":"sudipta.sharif@outlook.com",
+	"github":"sudiptasharif",
+	"location":"Fort Wayne, IN"
+};
 
 // Bio
 var bio = {
-	
+	"name":"",
+	"role":"",
+	"welcomeMessage":"",
+	"contacts": contacts,
+	"skills":["Awesomeness","Java","C","C++","PHP","SQL","HTML","CSS","JavaScript","JQuery","Bootstrap","Git","MySQL","phpMyAdmin"],
 };
+
 
 // Education
 var educations = {
 	"ipfw":{
-		
-	},
-	"gdBirla":{
-		
-	},
-	"stAnthony":{
-		
+		"name":"Indiana University Purdue University Fort Wayne",
+		"location":"Fort Wayne, IN",
+		"degree": "Bachelor of Science",
+		"major":"Computer Science (Mathematics minor)",
+		"date":"January 2012 - June 2016",
+		"url":"http://www.ipfw.edu/"
 	}
 };
 
