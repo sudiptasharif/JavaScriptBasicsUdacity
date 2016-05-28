@@ -10,7 +10,7 @@ var workExperience = {
             "training new employees and interviewing new potential employees for the security office."
     },
     "web_developer": {
-        "employer": "Indiana University Purdue University Fort Wayne - Lincoln Financial Group (Partner)",
+        "employer": "Indiana University Purdue University Fort Wayne - Lincoln Financial Group (Sponsor)",
         "title": "Team Leader - Senior Design Capstone Project",
         "location": "Fort Wayne, IN",
         "dates": "August 2015-May 2016",
@@ -51,27 +51,167 @@ var workExperience = {
     }
 };
 
+// Set and display work experience
+if(workExperience !== null){
+	// Work 1 - Security analyst (sa)
+	var saEmployer = HTMLworkEmployer.replace("%data%",workExperience.student_security_analyst.employer);
+	var saTitle = HTMLworkTitle.replace("%data%",workExperience.student_security_analyst.title);
+	var saDate = HTMLworkDates.replace("%data%",workExperience.student_security_analyst.dates);
+	var saLocation = HTMLworkLocation.replace("%data%",workExperience.student_security_analyst.location);
+	var saDesc = HTMLworkDescription.replace("%data%",workExperience.student_security_analyst.description);
+	$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(saEmployer);
+	$(".work-entry").append(saTitle);
+	$(".work-entry").append(saDate);
+	$(".work-entry").append(saLocation);
+	$(".work-entry").append(saDesc);
+
+	// Work 2 - web developer (webDev)
+	var wedDevEmployer = HTMLworkEmployer.replace("%data%",workExperience.web_developer.employer);
+	var wedDevTitle = HTMLworkTitle.replace("%data%",workExperience.web_developer.title);
+	var wedDevDate = HTMLworkDates.replace("%data%",workExperience.web_developer.dates);
+	var wedDevLocation = HTMLworkLocation.replace("%data%",workExperience.web_developer.location);
+	var wedDevDesc = HTMLworkDescription.replace("%data%",workExperience.web_developer.description);
+	//$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(wedDevEmployer);
+	$(".work-entry").append(wedDevTitle);
+	$(".work-entry").append(wedDevDate);
+	$(".work-entry").append(wedDevLocation);
+	$(".work-entry").append(wedDevDesc);
+
+	// Work 3 - java developer (jd)
+	var jdEmployer = HTMLworkEmployer.replace("%data%",workExperience.java_developer.employer);
+	var jdTitle = HTMLworkTitle.replace("%data%",workExperience.java_developer.title);
+	var jdDate = HTMLworkDates.replace("%data%",workExperience.java_developer.dates);
+	var jdLocation = HTMLworkLocation.replace("%data%",workExperience.java_developer.location);
+	var jdDesc = HTMLworkDescription.replace("%data%",workExperience.java_developer.description);
+	//$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(jdEmployer);
+	$(".work-entry").append(jdTitle);
+	$(".work-entry").append(jdDate);
+	$(".work-entry").append(jdLocation);
+	$(".work-entry").append(jdDesc);
+
+	// Work 4 - lab response team (lrt)
+	var lrtEmployer = HTMLworkEmployer.replace("%data%",workExperience.lab_response_team.employer);
+	var lrtTitle = HTMLworkTitle.replace("%data%",workExperience.lab_response_team.title);
+	var lrtDate = HTMLworkDates.replace("%data%",workExperience.lab_response_team.dates);
+	var lrtLocation = HTMLworkLocation.replace("%data%",workExperience.lab_response_team.location);
+	var lrtDesc = HTMLworkDescription.replace("%data%",workExperience.lab_response_team.description);
+	//$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(lrtEmployer);
+	$(".work-entry").append(lrtTitle);
+	$(".work-entry").append(lrtDate);
+	$(".work-entry").append(lrtLocation);
+	$(".work-entry").append(lrtDesc);
+
+	// Work 5 - math tutor (mt)
+	var mtEmployer = HTMLworkEmployer.replace("%data%",workExperience.math_tutor.employer);
+	var mtTitle = HTMLworkTitle.replace("%data%",workExperience.math_tutor.title);
+	var mtDate = HTMLworkDates.replace("%data%",workExperience.math_tutor.dates);
+	var mtLocation = HTMLworkLocation.replace("%data%",workExperience.math_tutor.location);
+	var mtDesc = HTMLworkDescription.replace("%data%",workExperience.math_tutor.description);
+	//$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(mtEmployer);
+	$(".work-entry").append(mtTitle);
+	$(".work-entry").append(mtDate);
+	$(".work-entry").append(mtLocation);
+	$(".work-entry").append(mtDesc);
+
+	// Work 6 - teaching assistant (ta)
+	var taEmployer = HTMLworkEmployer.replace("%data%",workExperience.teaching_assistant.employer);
+	var taTitle = HTMLworkTitle.replace("%data%",workExperience.teaching_assistant.title);
+	var taDate = HTMLworkDates.replace("%data%",workExperience.teaching_assistant.dates);
+	var taLocation = HTMLworkLocation.replace("%data%",workExperience.teaching_assistant.location);
+	var taDesc = HTMLworkDescription.replace("%data%",workExperience.teaching_assistant.description);
+	//$("#workExperience").append(HTMLworkStart);
+	$(".work-entry").append(taEmployer);
+	$(".work-entry").append(taTitle);
+	$(".work-entry").append(taDate);
+	$(".work-entry").append(taLocation);
+	$(".work-entry").append(taDesc);	
+
+}
+
 // Projects
 var projects = {
     "dst_vision": {
-        "title": "Supplementary Web Application for DST Vision Requests.",
+        "title": "Supplementary Web Application for DST Vision Requests",
         "dates": "August 2015-May 2016",
         "description": "As part of our Senior Design Capstone Project, we created a web site that automates" +
             " various repetitive tasks for a business analyst. These tasks included parsing an XML file according to Lincoln's business logic, sending emails periodically," +
             " keeping track of all the emails sent and received, keeping track of all the requesters who has made a request in a database and a list of all the requesters who were approved and denied." +
-            " We integrated useful CRUD operations into this web application using Bootstrap, JQuery, AJAX, PHP and MySQL",
+            " We integrated useful CRUD operations into this web application using Bootstrap, JQuery, AJAX, PHP and MySQL.",
         "images": []
     },
     "vulnerable_web_app": {
-        "title": "Demonstrating SQL injection in a vulnerable web site.",
+        "title": "Demonstrating SQL Injection in a Vulnerable Web Site",
         "dates": "April 2016-May 2016",
-        "description": "As part of my Operating and Security Course, I demonstrated in class how we can exploit a web site that is vulnerable to " +
+        "description": "As part of my Operating and Security course, I demonstrated in class how we can exploit a web site that is vulnerable to " +
             "SQL injection attack my building web site that does not follow safe PHP-MySQL coding standards. I used Bootstrap to give my web site a " +
             "aesthetically pleasing appearance. In addition to demonstrating my SQL injection attacks, I also demonstrated what steps we can take to prevent " +
-            "SQL injection attacks",
+            "SQL injection attacks.",
         "images": []
     }
 };
+
+// Set and Display Project
+if(projects !== null){
+	// Project 1 DST vision
+	var dstTitle = HTMLprojectTitle.replace("%data%",projects.dst_vision.title);
+	var dstDate = HTMLprojectDates.replace("%data%",projects.dst_vision.dates);
+	var dstDesc = HTMLprojectDescription.replace("%data%",projects.dst_vision.description);
+	$("#projects").append(HTMLprojectStart);
+	$(".project-entry").append(dstTitle);
+	$(".project-entry").append(dstDate);
+	$(".project-entry").append(dstDesc);
+	// Display project image if any
+	if(projects.dst_vision.images !== ""){
+		var dstProjPic = HTMLprojectImage.replace("%data%",projects.dst_vision.images);
+		$(".project-entry").append(dstProjPic);
+	}
+
+	// Project 2 Vulnerable web application (vul_web_app)
+	var vul_web_appTitle = HTMLprojectTitle.replace("%data%",projects.vulnerable_web_app.title);
+	var vul_web_appDate = HTMLprojectDates.replace("%data%",projects.vulnerable_web_app.dates);
+	var vul_web_appDesc = HTMLprojectDescription.replace("%data%",projects.vulnerable_web_app.description);
+	$(".project-entry").append(vul_web_appTitle);
+	$(".project-entry").append(vul_web_appDate);
+	$(".project-entry").append(vul_web_appDesc);
+	// Display project image if any
+	if(projects.vulnerable_web_app.images !== ""){
+		var vul_web_appProjPic = HTMLprojectImage.replace("%data%",projects.vulnerable_web_app.images);
+		$(".project-entry").append(vul_web_appProjPic);
+	}		
+}
+
+// Education
+var education = {
+    "ipfw": {
+        "name": "Indiana University Purdue University Fort Wayne",
+        "location": "Fort Wayne, IN",
+        "degree": "Bachelor of Science",
+        "major": "Computer Science (Mathematics Minor)",
+        "date": "January 2012 - June 2016",
+        "url": "http://www.ipfw.edu/"
+    }
+};
+
+// Set up and display the educations
+if(education !== null){
+	// IPFW - Undergrad
+	var ipfw_name = HTMLschoolName.replace("%data%",education.ipfw.name);
+	var ipfw_degree = HTMLschoolDegree.replace("%data%",education.ipfw.degree);
+	var ipfw_date = HTMLschoolDates.replace("%data%",education.ipfw.date);
+	var ipfw_location = HTMLschoolLocation.replace("%data%",education.ipfw.location);
+	var ipfw_major = HTMLschoolMajor.replace("%data%",education.ipfw.major);
+	$("#education").append(HTMLschoolStart);
+	$(".education-entry").append(ipfw_name);
+	$(".education-entry").append(ipfw_degree);
+	$(".education-entry").append(ipfw_date);
+	$(".education-entry").append(ipfw_location);
+	$(".education-entry").append(ipfw_major);
+}
 
 // Contacts
 var contacts = {
@@ -88,20 +228,7 @@ var bio = {
     "welcomeMessage": "Hello All, welcome to my online Resume.",
     "contacts": contacts,
     "skills": ["Awesomeness", "Java", "C", "C++", "PHP", "SQL", "HTML", "CSS", "JavaScript", "JQuery", "Bootstrap", "Git", "MySQL", "phpMyAdmin"],
-    "biopic": url(images/park.jpg)
-};
-
-
-// Education
-var educations = {
-    "ipfw": {
-        "name": "Indiana University Purdue University Fort Wayne",
-        "location": "Fort Wayne, IN",
-        "degree": "Bachelor of Science",
-        "major": "Computer Science (Mathematics minor)",
-        "date": "January 2012 - June 2016",
-        "url": "http://www.ipfw.edu/"
-    }
+    "biopic": "images/park.jpg"
 };
 
 // Set up your name and role on the resume
@@ -114,7 +241,7 @@ if(bio.name !== "" && bio.role !== ""){
 }
 
 // Set up your contacts
-if(bio.contacts != null){
+if(bio.contacts !== null){
     HTMLmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
     HTMLemail = HTMLemail.replace("%data%",bio.contacts.email);
     HTMLgithub = HTMLgithub.replace("%data%",bio.contacts.github);
@@ -125,6 +252,16 @@ if(bio.contacts != null){
     $("#topContacts").append(HTMLlocation);
 }
 
+// Set up your biopic and welcome message
+if(bio.biopic !== ""){
+	HTMLbioPic = HTMLbioPic.replace("%data%",bio.biopic);
+
+}
+if(bio.welcomeMessage !==""){
+	HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
+
+}
+
 
 // 1) Write an if statement to check whether there
 // are any skills in the bio object
@@ -132,7 +269,7 @@ if(bio.contacts != null){
 // HTMLskillsStart to the div with id=header
 // 3) Then .append() the skills to the element with id=skills
 // using HTMLskills to format each skill.
-if (bio.skills.length != 0) {
+if (bio.skills.length !== 0) {
 	console.log(bio.skills.length);
     $("#header").append(HTMLskillsStart);
 
@@ -174,6 +311,6 @@ if (bio.skills.length != 0) {
     $("#skills").append(git);
     $("#skills").append(mysql);
     $("#skills").append(phpMyAdmin);
-
-
 }
+
+
