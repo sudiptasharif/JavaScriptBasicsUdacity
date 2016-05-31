@@ -371,4 +371,26 @@ if (bio.skills.length !== 0) {
     $("#skills").append(phpMyAdmin);
 }
 
-// For in loops
+// append internationalizeButton to the main div
+$("#main").append(internationalizeButton);
+
+// Create a function called inName() that takes in a string of two names and returns an internationalized 
+// version that looks so: Cameron PITTMAN
+function inName(name){
+
+    var nameArr = name.trim().split(" ");
+    var lastName = nameArr[1];
+    var firstName = nameArr[0];
+
+    lastName = lastName.toUpperCase();
+    firstName = firstName.toLowerCase();
+
+    var firstLetter = firstName.charAt(0).toUpperCase();
+    firstName = firstName.replace(firstName.charAt(0),firstLetter);
+
+    var fullName = firstName+" "+lastName;
+
+    return fullName;
+}
+// Testing the above function
+console.log(inName("sebastian thrun"));
