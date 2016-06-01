@@ -280,4 +280,6 @@ function inName(name) {
 
     return fullName;
 }
+
+// Add map to your resume
 $("#mapDiv").append(googleMap);
