@@ -54,114 +54,6 @@ var workExperience = {
     }
 };
 
-/*// Set and display work experience
-if (workExperience !== null) {
-    // Work 1 - Security analyst (sa)
-    var saEmployer = HTMLworkEmployer.replace("%data%", workExperience.student_security_analyst.employer);
-    var saTitle = HTMLworkTitle.replace("%data%", workExperience.student_security_analyst.title);
-    var saDate = HTMLworkDates.replace("%data%", workExperience.student_security_analyst.dates);
-    var saLocation = HTMLworkLocation.replace("%data%", workExperience.student_security_analyst.location);
-    var saDesc = HTMLworkDescription.replace("%data%", workExperience.student_security_analyst.description);
-    $("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(saEmployer);
-    $(".work-entry").append(saTitle);
-    $(".work-entry").append(saDate);
-    $(".work-entry").append(saLocation);
-    $(".work-entry").append(saDesc);
-
-    // Work 2 - web developer (webDev)
-    var wedDevEmployer = HTMLworkEmployer.replace("%data%", workExperience.web_developer.employer);
-    var wedDevTitle = HTMLworkTitle.replace("%data%", workExperience.web_developer.title);
-    var wedDevDate = HTMLworkDates.replace("%data%", workExperience.web_developer.dates);
-    var wedDevLocation = HTMLworkLocation.replace("%data%", workExperience.web_developer.location);
-    var wedDevDesc = HTMLworkDescription.replace("%data%", workExperience.web_developer.description);
-    //$("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(wedDevEmployer);
-    $(".work-entry").append(wedDevTitle);
-    $(".work-entry").append(wedDevDate);
-    $(".work-entry").append(wedDevLocation);
-    $(".work-entry").append(wedDevDesc);
-
-    // Work 3 - java developer (jd)
-    var jdEmployer = HTMLworkEmployer.replace("%data%", workExperience.java_developer.employer);
-    var jdTitle = HTMLworkTitle.replace("%data%", workExperience.java_developer.title);
-    var jdDate = HTMLworkDates.replace("%data%", workExperience.java_developer.dates);
-    var jdLocation = HTMLworkLocation.replace("%data%", workExperience.java_developer.location);
-    var jdDesc = HTMLworkDescription.replace("%data%", workExperience.java_developer.description);
-    //$("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(jdEmployer);
-    $(".work-entry").append(jdTitle);
-    $(".work-entry").append(jdDate);
-    $(".work-entry").append(jdLocation);
-    $(".work-entry").append(jdDesc);
-
-    // Work 4 - lab response team (lrt)
-    var lrtEmployer = HTMLworkEmployer.replace("%data%", workExperience.lab_response_team.employer);
-    var lrtTitle = HTMLworkTitle.replace("%data%", workExperience.lab_response_team.title);
-    var lrtDate = HTMLworkDates.replace("%data%", workExperience.lab_response_team.dates);
-    var lrtLocation = HTMLworkLocation.replace("%data%", workExperience.lab_response_team.location);
-    var lrtDesc = HTMLworkDescription.replace("%data%", workExperience.lab_response_team.description);
-    //$("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(lrtEmployer);
-    $(".work-entry").append(lrtTitle);
-    $(".work-entry").append(lrtDate);
-    $(".work-entry").append(lrtLocation);
-    $(".work-entry").append(lrtDesc);
-
-    // Work 5 - math tutor (mt)
-    var mtEmployer = HTMLworkEmployer.replace("%data%", workExperience.math_tutor.employer);
-    var mtTitle = HTMLworkTitle.replace("%data%", workExperience.math_tutor.title);
-    var mtDate = HTMLworkDates.replace("%data%", workExperience.math_tutor.dates);
-    var mtLocation = HTMLworkLocation.replace("%data%", workExperience.math_tutor.location);
-    var mtDesc = HTMLworkDescription.replace("%data%", workExperience.math_tutor.description);
-    //$("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(mtEmployer);
-    $(".work-entry").append(mtTitle);
-    $(".work-entry").append(mtDate);
-    $(".work-entry").append(mtLocation);
-    $(".work-entry").append(mtDesc);
-
-    // Work 6 - teaching assistant (ta)
-    var taEmployer = HTMLworkEmployer.replace("%data%", workExperience.teaching_assistant.employer);
-    var taTitle = HTMLworkTitle.replace("%data%", workExperience.teaching_assistant.title);
-    var taDate = HTMLworkDates.replace("%data%", workExperience.teaching_assistant.dates);
-    var taLocation = HTMLworkLocation.replace("%data%", workExperience.teaching_assistant.location);
-    var taDesc = HTMLworkDescription.replace("%data%", workExperience.teaching_assistant.description);
-    //$("#workExperience").append(HTMLworkStart);
-    $(".work-entry").append(taEmployer);
-    $(".work-entry").append(taTitle);
-    $(".work-entry").append(taDate);
-    $(".work-entry").append(taLocation);
-    $(".work-entry").append(taDesc);
-}*/
-
-// Set and display the work object according to quiz
-/*if (workExperience !== null) {
-    // some local variable that will be used in the for in loop
-    var employer, title, date, local, workDesc;
-    var job;
-    // A for-in loop that iterates over all the jobs in my work object
-    for (var workExIndex in workExperience) {
-        // Print to console
-        console.log(workExperience[workExIndex]);
-
-        // append a HTMLworkEmployer for each job
-        $("#workExperience").append(HTMLworkStart);
-        employer = HTMLworkEmployer.replace("%data%", workExperience[workExIndex].employer);
-        title = HTMLworkTitle.replace("%data%", workExperience[workExIndex].title);
-        job = employer + title;
-        date = HTMLworkDates.replace("%data%", workExperience[workExIndex].dates);
-        local = HTMLworkLocation.replace("%data%", workExperience[workExIndex].location);
-        workDesc = HTMLworkDescription.replace("%data%", workExperience[workExIndex].description);
-
-        $(".work-entry:last").append(job);
-        $(".work-entry:last").append(date);
-        $(".work-entry:last").append(local);
-        $(".work-entry:last").append(workDesc);
-    }
-}*/
-// The above code is commented out because it's all put inside a displayWork function below
-
 // Move all the above code into a function
 function displayWork() {
     if (workExperience !== null) {
@@ -171,7 +63,7 @@ function displayWork() {
         // A for-in loop that iterates over all the jobs in my work object
         for (var workExIndex in workExperience) {
             // Print to console
-            console.log(workExperience[workExIndex]);
+            //console.log(workExperience[workExIndex]);
 
             // append a HTMLworkEmployer for each job
             $("#workExperience").append(HTMLworkStart);
@@ -194,7 +86,7 @@ displayWork();
 
 // Projects
 var projects = {
-    "dst_vision": {
+    _projects: [{
         "title": "Supplementary Web Application for DST Vision Requests",
         "dates": "August 2015-May 2016",
         "description": "As part of our Senior Design Capstone Project, we created a web site that automates" +
@@ -202,8 +94,7 @@ var projects = {
             " keeping track of all the emails sent and received, keeping track of all the requesters who has made a request in a database and a list of all the requesters who were approved and denied." +
             " We integrated useful CRUD operations into this web application using Bootstrap, JQuery, AJAX, PHP and MySQL.",
         "images": []
-    },
-    "vulnerable_web_app": {
+    }, {
         "title": "Demonstrating SQL Injection in a Vulnerable Web Site",
         "dates": "April 2016-May 2016",
         "description": "As part of my Operating and Security course, I demonstrated in class how we can exploit a web site that is vulnerable to " +
@@ -211,10 +102,42 @@ var projects = {
             "aesthetically pleasing appearance. In addition to demonstrating my SQL injection attacks, I also demonstrated what steps we can take to prevent " +
             "SQL injection attacks.",
         "images": []
-    }
+    }]
 };
 
-// Set and Display Project
+// Encapsulate display() within the projects object
+projects.display = function() {
+
+    var prjTitle;
+    var prjDate;
+    var prjDesc;
+    var prjImage;
+    var total_projects = projects._projects.length;
+
+    for (var index = 0; index < total_projects; index++) {
+
+        $("#projects").append(HTMLprojectStart);
+        prjTitle = HTMLprojectTitle.replace("%data%", projects._projects[index].title);
+        prjDate = HTMLprojectDates.replace("%data%", projects._projects[index].dates);
+        prjDesc = HTMLprojectDescription.replace("%data%", projects._projects[index].description);
+        $(".project-entry:last").append(prjTitle);
+        $(".project-entry:last").append(prjDate);
+        $(".project-entry:last").append(prjDesc);
+
+        if (projects._projects[index].images !== null) {
+            prjImage = HTMLprojectImage.replace("%data%", projects._projects[index].images);
+            $(".project-entry:last").append(prjImage);
+        }
+    }
+
+
+
+};
+
+// Call the projects display method of testing
+projects.display();
+
+/*// Set and Display Project
 if (projects !== null) {
     // Project 1 DST vision
     var dstTitle = HTMLprojectTitle.replace("%data%", projects.dst_vision.title);
@@ -242,7 +165,7 @@ if (projects !== null) {
         var vul_web_appProjPic = HTMLprojectImage.replace("%data%", projects.vulnerable_web_app.images);
         $(".project-entry").append(vul_web_appProjPic);
     }
-}
+}*/
 
 // Education
 var education = {
@@ -374,9 +297,9 @@ if (bio.skills.length !== 0) {
 // append internationalizeButton to the main div
 $("#main").append(internationalizeButton);
 
-// Create a function called inName() that takes in a string of two names and returns an internationalized 
+// Create a function called inName() that takes in a string of two names and returns an internationalized
 // version that looks so: Cameron PITTMAN
-function inName(name){
+function inName(name) {
 
     var nameArr = name.trim().split(" ");
     var lastName = nameArr[1];
@@ -386,11 +309,9 @@ function inName(name){
     firstName = firstName.toLowerCase();
 
     var firstLetter = firstName.charAt(0).toUpperCase();
-    firstName = firstName.replace(firstName.charAt(0),firstLetter);
+    firstName = firstName.replace(firstName.charAt(0), firstLetter);
 
-    var fullName = firstName+" "+lastName;
+    var fullName = firstName + " " + lastName;
 
     return fullName;
 }
-// Testing the above function
-console.log(inName("sebastian thrun"));
