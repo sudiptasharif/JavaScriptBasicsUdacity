@@ -2,77 +2,72 @@
 // http://localhost/JavaScriptBasicsUdacity/index.html
 
 // Works
-var workExperience = {
-    "student_security_analyst": {
+var work = {
+    jobs: [{
         "employer": "Indiana University Purdue University Fort Wayne - Information Technology Services",
         "title": "Student Network Security Analyst",
-        "location": "Fort Wayne, IN",
+        "location": "Indiana University Purdue University Fort Wayne, Fort Wayne, IN",
         "dates": "November 2014-Present",
         "description": "As a student network security analyst, I am in charge of detecting and liaising threats imposed by various Malware and Spyware intended for faculty, stuff and students." +
             "I research, investigate and respond to Spam emails, suspicious file attachments and harmful URLs that direct users to socially engineered websites. I am also in charge of" +
             "training new employees and interviewing new potential employees for the security office."
-    },
-    "web_developer": {
+    }, {
         "employer": "Indiana University Purdue University Fort Wayne - Lincoln Financial Group (Sponsor)",
         "title": "Senior Design Capstone Project (Team Leader)",
-        "location": "Fort Wayne, IN",
+        "location": "Indiana University Purdue University Fort Wayne, Fort Wayne, IN",
         "dates": "August 2015-May 2016",
         "description": "As part of our senior design project, my team and I were in charge of building a fully functional web application that automated various tasks for our client Lincoln Financial Group." +
             "This web application uses PHP and MySQL as the back end and HTML, CSS, JavaScript, JQuery, AJAX and Bootstrap as the front end technology."
 
-    },
-    "java_developer": {
+    }, {
         "employer": "Agri Stats Inc.",
         "title": "Java Developer (Intern)",
-        "location": "Fort Wayne, IN",
+        "location": "6510 Mutual Dr, Fort Wayne, IN",
         "dates": "May 2015-August 2015",
         "description": "As an intern for Agri Stats Inc., I was responsible for converting clipper codes to Java using Agri Stat's Clipper-Java API. I also inserted Java functions to" +
             "a PostgreSQL database, tested the accuracy of converted functions by looking at generated logs and debugged the converted Java code whenever necessary."
-    },
-    "lab_response_team": {
+    }, {
         "employer": "Indiana University Purdue University Fort Wayne - Information Technology Services",
         "title": "Lab Response Team (L.R.T)",
-        "location": "Fort Wayne",
+        "location": "Indiana University Purdue University Fort Wayne, Fort Wayne, IN",
         "dates": "July 2013-November 2014",
         "description": "As part of this team, I provided technical support to faculty and student with any issues on their laptops, phones and tables or school comouters with respect to" +
             "IPFW's applications and devices such as wifi connections, printer issues, IU ware software downloads, any help with Microsoft Word, Excel and Visio. I communicated any device" +
             "that needed replacement or repaired with IPFW Library technicians."
-    },
-    "math_tutor": {
+    }, {
         "employer": "Indiana University Purdue University Fort Wayne - Information Technology Services",
         "title": "Mathematics Tutor",
-        "location": "Fort Wayne, IN",
+        "location": "Indiana University Purdue University Fort Wayne, Fort Wayne, IN",
         "dates": "February 2013-July 2013",
         "description": "As a mathematics tutor, I helped students with homework, quizzes and exams. I provided conceptual understanding of the following topics Calculus, Discrete math, Linear algebra and Statistics."
-    },
-    "teaching_assistant": {
+    }, {
         "employer": "Indiana University Purdue University Fort Wayne - Biology Department",
         "title": "Teaching Assistant",
-        "location": "Fort Wayne, IN",
+        "location": "Indiana University Purdue University Fort Wayne, Fort Wayne, IN",
         "dates": "October 2012-July 2013",
         "description": "I helped my Biology professor with grading homeworks, quizzes and exams. I was also in charge of uploading grades to Blackboard."
-    }
+    }]
 };
 
 // Move all the above code into a function
 function displayWork() {
-    if (workExperience !== null) {
+    if (work !== null) {
         // some local variable that will be used in the for in loop
         var employer, title, date, local, workDesc;
         var job;
         // A for-in loop that iterates over all the jobs in my work object
-        for (var workExIndex in workExperience) {
+        for (var workExIndex in work.jobs) {
             // Print to console
             //console.log(workExperience[workExIndex]);
 
             // append a HTMLworkEmployer for each job
             $("#workExperience").append(HTMLworkStart);
-            employer = HTMLworkEmployer.replace("%data%", workExperience[workExIndex].employer);
-            title = HTMLworkTitle.replace("%data%", workExperience[workExIndex].title);
+            employer = HTMLworkEmployer.replace("%data%", work.jobs[workExIndex].employer);
+            title = HTMLworkTitle.replace("%data%", work.jobs[workExIndex].title);
             job = employer + title;
-            date = HTMLworkDates.replace("%data%", workExperience[workExIndex].dates);
-            local = HTMLworkLocation.replace("%data%", workExperience[workExIndex].location);
-            workDesc = HTMLworkDescription.replace("%data%", workExperience[workExIndex].description);
+            date = HTMLworkDates.replace("%data%", work.jobs[workExIndex].dates);
+            local = HTMLworkLocation.replace("%data%", work.jobs[workExIndex].location);
+            workDesc = HTMLworkDescription.replace("%data%", work.jobs[workExIndex].description);
 
             $(".work-entry:last").append(job);
             $(".work-entry:last").append(date);
@@ -137,56 +132,26 @@ projects.display = function() {
 // Call the projects display method of testing
 projects.display();
 
-/*// Set and Display Project
-if (projects !== null) {
-    // Project 1 DST vision
-    var dstTitle = HTMLprojectTitle.replace("%data%", projects.dst_vision.title);
-    var dstDate = HTMLprojectDates.replace("%data%", projects.dst_vision.dates);
-    var dstDesc = HTMLprojectDescription.replace("%data%", projects.dst_vision.description);
-    $("#projects").append(HTMLprojectStart);
-    $(".project-entry").append(dstTitle);
-    $(".project-entry").append(dstDate);
-    $(".project-entry").append(dstDesc);
-    // Display project image if any
-    if (projects.dst_vision.images !== "") {
-        var dstProjPic = HTMLprojectImage.replace("%data%", projects.dst_vision.images);
-        $(".project-entry").append(dstProjPic);
-    }
-
-    // Project 2 Vulnerable web application (vul_web_app)
-    var vul_web_appTitle = HTMLprojectTitle.replace("%data%", projects.vulnerable_web_app.title);
-    var vul_web_appDate = HTMLprojectDates.replace("%data%", projects.vulnerable_web_app.dates);
-    var vul_web_appDesc = HTMLprojectDescription.replace("%data%", projects.vulnerable_web_app.description);
-    $(".project-entry").append(vul_web_appTitle);
-    $(".project-entry").append(vul_web_appDate);
-    $(".project-entry").append(vul_web_appDesc);
-    // Display project image if any
-    if (projects.vulnerable_web_app.images !== "") {
-        var vul_web_appProjPic = HTMLprojectImage.replace("%data%", projects.vulnerable_web_app.images);
-        $(".project-entry").append(vul_web_appProjPic);
-    }
-}*/
-
 // Education
 var education = {
-    "ipfw": {
+    schools: [{
         "name": "Indiana University Purdue University Fort Wayne",
         "location": "Fort Wayne, IN",
         "degree": "Bachelor of Science",
         "major": "Computer Science (Mathematics Minor)",
         "date": "January 2012 - June 2016",
         "url": "http://www.ipfw.edu/"
-    }
+    }]
 };
 
 // Set up and display the educations
 if (education !== null) {
     // IPFW - Undergrad
-    var ipfw_name = HTMLschoolName.replace("%data%", education.ipfw.name);
-    var ipfw_degree = HTMLschoolDegree.replace("%data%", education.ipfw.degree);
-    var ipfw_date = HTMLschoolDates.replace("%data%", education.ipfw.date);
-    var ipfw_location = HTMLschoolLocation.replace("%data%", education.ipfw.location);
-    var ipfw_major = HTMLschoolMajor.replace("%data%", education.ipfw.major);
+    var ipfw_name = HTMLschoolName.replace("%data%", education.schools[0].name);
+    var ipfw_degree = HTMLschoolDegree.replace("%data%", education.schools[0].degree);
+    var ipfw_date = HTMLschoolDates.replace("%data%", education.schools[0].date);
+    var ipfw_location = HTMLschoolLocation.replace("%data%", education.schools[0].location);
+    var ipfw_major = HTMLschoolMajor.replace("%data%", education.schools[0].major);
     $("#education").append(HTMLschoolStart);
     $(".education-entry").append(ipfw_name);
     $(".education-entry").append(ipfw_degree);
@@ -200,7 +165,7 @@ var contacts = {
     "mobile": "(260) 739-8352",
     "email": "sudipta.sharif@outlook.com",
     "github": "sudiptasharif",
-    "location": "Fort Wayne, IN"
+    "location": "4318 Roseview Road,Fort Wayne,IN"
 };
 
 // Bio
@@ -315,3 +280,4 @@ function inName(name) {
 
     return fullName;
 }
+$("#mapDiv").append(googleMap);
