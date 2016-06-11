@@ -283,3 +283,8 @@ function inName(name) {
 
 // Add map to your resume
 $("#mapDiv").append(googleMap);
+
+
+// This is some random text, I am only doing it so that
+// I can commit a change that uses sublime text as the
+// git core text editor
